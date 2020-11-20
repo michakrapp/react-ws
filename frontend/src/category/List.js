@@ -18,8 +18,7 @@ export default function List() {
     'http://localhost:3001/categories/',
   );
 
-  // if (categories.length === 0) {
-  if (true) {
+  if (categories.length === 0) {
     return (
       <div
         style={{ backgroundColor: 'hotpink' }}

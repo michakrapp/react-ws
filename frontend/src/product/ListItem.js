@@ -1,6 +1,8 @@
+import './ListItem.css';
+
 export default function ListItem({ product, onDelete }) {
   return (
-    <div>
+    <div className="product-item">
       <div>
         {product.title} {product.price} €
       </div>
