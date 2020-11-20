@@ -15,3 +15,15 @@ Die wichtigsten Themen heute:
 - Architekturen im Frontend
 - Ausblick: Testing
 - Ausblick: Redux
+
+## CRA
+
+https://create-react-app.dev/
+
+`npm create react-app frontend --use-npm --template typescript`
+`npx create-react-app frontend --use-npm --template typescript`
+
+```
+npm install -g create-react-app
+create-react-app frontend --use-npm --template typescript
+```
