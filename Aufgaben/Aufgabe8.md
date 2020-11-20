@@ -9,3 +9,10 @@ Beim Speichern des Formulars, sollen die Werte an den Server gesendet werden und
 Die Kategorie ist fix: 2
 
 Es gibt: onClick, onChange, onSubmit
+
+POST http://localhost:3001/products
+
+fetch(URL, {
+method: 'POST',
+body: data
+})
