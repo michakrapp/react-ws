@@ -40,3 +40,4 @@ create-react-app frontend --use-npm --template typescript
   - Installation: npm i styled-components
   - Einbindung import styled from 'styled-components'
   - const Warning = styled.span`color: green`;
+- Tailwind: https://tailwindcss.com/

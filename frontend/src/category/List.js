@@ -25,7 +25,7 @@ export default function List() {
         style={{ backgroundColor: 'hotpink' }}
         className={classnames({ empty: true }, styles.empty)}
       >
-        <Warning>No results</Warning> found
+        <Warning critical>No results</Warning> found
       </div>
     );
   } else {
