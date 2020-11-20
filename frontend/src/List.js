@@ -9,9 +9,6 @@ export default function List() {
       const data = await response.json();
       setCategories(data);
     })();
-    return () => {
-      console.log('UNMOUNT');
-    };
   }, []);
 
   if (categories.length === 0) {
