@@ -7,6 +7,7 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import Form from './product/Form';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <Switch>
         <Route path="/category">
           <CategoryList />
+        </Route>
+        <Route path="/product/form">
+          <Form />
         </Route>
         <Route path="/product/:categoryId">
           <ProductList />
