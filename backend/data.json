@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Baumarkt"
+    },
+    {
+      "id": 2,
+      "title": "Garten"
+    },
+    {
+      "id": 3,
+      "title": "Haustier"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category": 1,
+      "title": "Handmade Steel Hat",
+      "price": 563.0,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 2,
+      "category": 1,
+      "title": "Sleek Metal Soap",
+      "price": 17.95,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 3,
+      "category": 1,
+      "title": "Intelligent Cotton Mouse",
+      "price": 17.95,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 4,
+      "category": 2,
+      "title": "Unbranded Fresh Chair",
+      "price": 749.99,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 5,
+      "category": 2,
+      "title": "Small Soft Chips",
+      "price": 9.99,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 6,
+      "category": 2,
+      "title": "Intelligent Rubber Shoes",
+      "price": 199.99,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 7,
+      "category": 3,
+      "title": "Incredible Wooden Gloves",
+      "price": 49.99,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 8,
+      "category": 3,
+      "title": "Awesome Cotton Salad",
+      "price": 14.99,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 9,
+      "category": 3,
+      "title": "Rustic Fresh Keyboard",
+      "price": 299.99,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+    }
+  ]
+}
