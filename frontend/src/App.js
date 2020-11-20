@@ -1,10 +1,13 @@
 import './App.css';
-import List from './List';
+import CategoryList from './category/List';
+import ProductList from './product/List';
 
 function App() {
   return (
     <div>
-      <List />
+      <CategoryList />
+      <hr />
+      <ProductList />
     </div>
   );
 }
