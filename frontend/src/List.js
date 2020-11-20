@@ -1,26 +1,17 @@
 import { useState, useEffect } from 'react';
-const data = [
-  {
-    id: 1,
-    title: 'Baumarkt',
-  },
-  {
-    id: 2,
-    title: 'Garten',
-  },
-  {
-    id: 3,
-    title: 'Haustier',
-  },
-];
 
 export default function List() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
+    (async () => {
+      const response = await fetch('http://localhost:3001/categories');
+      const data = await response.json();
       setCategories(data);
-    }, 1000);
+    })();
+    return () => {
+      console.log('UNMOUNT');
+    };
   }, []);
 
   if (categories.length === 0) {
