@@ -1,24 +1,33 @@
 import { useState, useEffect } from 'react';
+const data = [
+  {
+    id: 1,
+    title: 'Baumarkt',
+  },
+  {
+    id: 2,
+    title: 'Garten',
+  },
+  {
+    id: 3,
+    title: 'Haustier',
+  },
+];
 
-export default function List(props) {
-  const [state, setState] = useState({ name: 'Klaus' });
+export default function List() {
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     setTimeout(() => {
-      setState({ name: 'Peter' });
+      setCategories(data);
     }, 1000);
   }, []);
 
-  console.log('RENDER');
-
-  function handleClick() {
-    console.log(state.name);
+  if (categories.length === 0) {
+    return <div>No results found</div>;
+  } else {
+    return categories.map((category) => (
+      <div key={category.id}>{category.title}</div>
+    ));
   }
-
-  return (
-    <div onClick={props.handleClick}>
-      <h1>{props.name}</h1>
-      My List {state.name}
-    </div>
-  );
 }
