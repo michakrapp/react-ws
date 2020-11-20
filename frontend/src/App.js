@@ -1,12 +1,10 @@
+import useVisibility from './useVisibility';
 import './App.css';
 import List from './List';
 
 function App() {
-  return (
-    <div>
-      <List />
-    </div>
-  );
+  const isVisible = useVisibility();
+  return <div>{isVisible ? <List /> : ''}</div>;
 }
 
 export default App;

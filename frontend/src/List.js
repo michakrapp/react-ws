@@ -4,19 +4,20 @@ import ListItem from './ListItem';
 export default function List() {
   const [categories, setCategories] = useState([]);
 
+  const categoryUrl = 'http://localhost:3001/categories/';
+
   useEffect(() => {
     (async () => {
-      const response = await fetch('http://localhost:3001/categories');
+      const response = await fetch(categoryUrl);
       const data = await response.json();
       setCategories(data);
     })();
   }, []);
 
   async function handleDelete(category) {
-    const response = await fetch(
-      `http://localhost:3001/categories/${category.id}`,
-      { method: 'DELETE' },
-    );
+    const response = await fetch(`${categoryUrl}${category.id}`, {
+      method: 'DELETE',
+    });
     if (response.status === 200) {
       setCategories((prevCategories) => {
         return prevCategories.filter((cat) => cat.id !== category.id);
