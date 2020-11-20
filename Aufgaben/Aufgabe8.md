@@ -6,7 +6,12 @@ Schreibt eine Funktion handleChange, mit der Ihr die Änderungen an den Fomularf
 
 Beim Speichern des Formulars, sollen die Werte an den Server gesendet werden und der Benutzer auf die Liste zurückgeleitet werden.
 
-Die Kategorie ist fix: 2
+Felder:
+
+- "category" fix auf 2
+- "title"
+- "price",
+- "description"
 
 Es gibt: onClick, onChange, onSubmit
 
