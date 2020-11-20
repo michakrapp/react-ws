@@ -1,14 +1,28 @@
 import './App.css';
 import CategoryList from './category/List';
 import ProductList from './product/List';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <CategoryList />
-      <hr />
-      <ProductList />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/category">
+          <CategoryList />
+        </Route>
+        <Route path="/product/:category">
+          <ProductList />
+        </Route>
+        <Route path="/">
+          <Redirect to="/category" />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
