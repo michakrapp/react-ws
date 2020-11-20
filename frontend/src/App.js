@@ -8,25 +8,29 @@ import {
   Redirect,
 } from 'react-router-dom';
 import Form from './product/Form';
+import Uncontrolled from './Uncontrolled';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/category">
-          <CategoryList />
-        </Route>
-        <Route path="/product/form">
-          <Form />
-        </Route>
-        <Route path="/product/:categoryId">
-          <ProductList />
-        </Route>
-        <Route path="/">
-          <Redirect to="/category" />
-        </Route>
-      </Switch>
-    </Router>
+    <>
+      <Uncontrolled />
+      <Router>
+        <Switch>
+          <Route path="/category">
+            <CategoryList />
+          </Route>
+          <Route path="/product/form">
+            <Form />
+          </Route>
+          <Route path="/product/:categoryId">
+            <ProductList />
+          </Route>
+          <Route path="/">
+            <Redirect to="/category" />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
