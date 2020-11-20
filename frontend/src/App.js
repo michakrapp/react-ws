@@ -13,6 +13,13 @@ function App() {
 
   const a = ['a', 'b', 'c'];
 
+  let content = <div>No content</div>;
+  if (a.length > 0) {
+    content = a.map((item) => <div key={Math.random()}>{item}</div>);
+  }
+
+  return <div>{content}</div>;
+
   return (
     <>
       <List name={name} handleClick={handleClick} />
