@@ -7,7 +7,7 @@ export default function List() {
   );
 
   if (products.length === 0) {
-    return <div>No results found</div>;
+    return <div>Keine Produkte gefunden</div>;
   } else {
     return products.map((category) => (
       <ListItem key={category.id} product={category} onDelete={handleDelete} />
