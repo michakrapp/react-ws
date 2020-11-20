@@ -9,5 +9,5 @@ export default function useVisibility(initialValue = true) {
     }, 1000);
   }, []);
 
-  return isVisible;
+  return { isVisible, setIsVisible };
 }
