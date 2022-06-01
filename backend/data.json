@@ -1,0 +1,39 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Lord of the Rings",
+      "author": "J. R. R. Tolkien",
+      "isbn": "978-0008471286",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "isbn": "978-0141191201",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "title": "Robinson Crusoe",
+      "author": "Daniel Dafoe",
+      "isbn": "978-1774262047",
+      "rating": 2
+    },
+    {
+      "id": 4,
+      "title": "Oliver Twist",
+      "author": "Charles Dickens",
+      "isbn": "978-0141439747",
+      "rating": 3
+    },
+    {
+      "id": 5,
+      "title": "Romeo and Juliet",
+      "author": "William Shakespeare",
+      "isbn": "978-0007902361",
+      "rating": 1
+    }
+  ]
+}
