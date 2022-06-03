@@ -1,7 +1,6 @@
-import { Add, Delete, Edit, Star, StarBorder } from '@mui/icons-material';
+import { Add} from '@mui/icons-material';
 import {
   Fab,
-  IconButton,
   Table,
   TableBody,
   TableCell,
@@ -13,6 +12,7 @@ import { ReactElement, useEffect, useState } from 'react';
 import { Book, InputBook } from './Book';
 import produce from 'immer';
 import Form from './Form';
+import {ListItem} from "./ListItem";
 
 function List(): ReactElement {
   const [books, setBooks] = useState<Book[]>([]);
@@ -23,6 +23,7 @@ function List(): ReactElement {
     fetch('http://localhost:3001/books')
       .then((response) => response.json())
       .then((data) => setBooks(data));
+    console.log('List component');
   }, []);
 
   function handleRate(book: Book, rating: number): void {
@@ -117,35 +118,13 @@ function List(): ReactElement {
 
           <TableBody>
             {books.map((book) => (
-              <TableRow key={book.id}>
-                <TableCell>{book.title}</TableCell>
-                <TableCell>{book.author}</TableCell>
-                <TableCell>{book.isbn}</TableCell>
-                <TableCell>
-                  {Array(5)
-                    .fill('')
-                    .map((e, i) => {
-                      return (
-                        <IconButton
-                          onClick={() => handleRate(book, i + 1)}
-                          key={i}
-                        >
-                          {book.rating < i + 1 ? <StarBorder /> : <Star />}
-                        </IconButton>
-                      );
-                    })}
-                </TableCell>
-                <TableCell>
-                  <IconButton onClick={() => handleDelete(book)}>
-                    <Delete />
-                  </IconButton>
-                </TableCell>
-                <TableCell>
-                  <IconButton onClick={() => handleShowForm(book)}>
-                    <Edit />
-                  </IconButton>
-                </TableCell>
-              </TableRow>
+                <ListItem
+                    key={book.id}
+                    book={book}
+                    handleShowForm={handleShowForm}
+                    handleRate={handleRate}
+                    handleDelete={handleDelete}
+                />
             ))}
           </TableBody>
         </Table>
