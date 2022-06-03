@@ -4,18 +4,15 @@ import {Book} from "./Book";
 
 type Props = {
     book: Book,
-    handleRate: (book: Book, rating: number) => void,
-    index: number
+    onRate: (book: Book, rating: number) => void;
 }
 
-export const Rating = ({book, handleRate, index}: Props) => {
-
-    return (
-        <IconButton
-            onClick={() => handleRate(book, index + 1)}
-            key={index}
-        >
-            {book.rating < index + 1 ? <StarBorder /> : <Star />}
+export const Rating = ({book, onRate}: Props) => (
+    <>
+    { Array(5).fill('').map((e, index) => (
+        <IconButton key={index} onClick={() => onRate(book, index + 1)}>
+            {book.rating < index + 1 ? <StarBorder/> : <Star/>}
         </IconButton>
-    );
-}
+    ))}
+    </>
+)

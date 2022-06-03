@@ -12,43 +12,43 @@ import { InputBook } from './Book';
 
 type Props = {
   book?: InputBook | null;
-  onSave: (book: InputBook) => void;
-  onCancel: () => void;
+  onSave: (book: InputBook) => void,
+  onCancel: () => void,
 };
 
 const initialBook: InputBook = {
-  title: '',
-  author: '',
-  isbn: '',
+    title: '',
+    author: '',
+    isbn: '',
 };
 
-function Form({ book, onSave, onCancel }: Props): ReactElement {
-  const [formState, setFormState] = useState<InputBook>(initialBook);
+function Form({ book, onCancel, onSave }: Props): ReactElement {
+    const [formState, setFormState] = useState<InputBook>(initialBook);
 
-  useEffect(() => {
-    if (book) {
-      setFormState(book);
+    useEffect(() => {
+        if (book) {
+            setFormState(book);
+        }
+    }, [book]);
+
+    function handleChange(e: ChangeEvent<HTMLInputElement>) {
+        setFormState((prevState) =>
+            produce(prevState, (draftState) => {
+                draftState[e.target.name as keyof WritableDraft<InputBook>] = e.target
+                    .value as never;
+            })
+        );
     }
-  }, [book]);
 
-  function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    setFormState((prevState) =>
-      produce(prevState, (draftState) => {
-        draftState[e.target.name as keyof WritableDraft<InputBook>] = e.target
-          .value as never;
-      })
-    );
-  }
+    function handleSubmit(e: FormEvent) {
+        e.preventDefault();
+        onSave(formState);
+    }
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-    onSave(formState);
-  }
-
-  function handleCancel() {
-    setFormState(initialBook);
-    onCancel();
-  }
+    function handleCancel() {
+        setFormState(initialBook);
+        onCancel();
+    }
 
   return (
     <Box>
