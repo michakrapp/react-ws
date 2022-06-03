@@ -39,6 +39,7 @@ if (isAuthEnabled()) {
   });
 }
 
+// bin restful api to data
 server.use('/', jsonServer.router('data.json'));
 
 server.listen(port, () =>
